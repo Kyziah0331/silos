@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opulence Atelier</title>
+  <link rel="stylesheet" href="style1.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Opulence Atelier</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#products">Products</a>
+      <a href="#cart" class="cart-link">
+        <span class="cart-icon">🛒</span>
+        <span id="cartCount">0</span>
+      </a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <img src="images/pic1.jpg" alt="many bags">
+    <div class="hero-text">
+      <h2 class="fade-in">Elegant Collections</h2>
+      <button class="view-btn" onclick="scrollToSection('products')">Shop Now</button>
+    </div>
+  </section>
+
+  <section id="products" class="product-list">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card slide-up">
+        <img src="images/pic2.jpg" alt="black bag">
+        <h3>Luxury Handbag</h3>
+        <p>$250</p>
+        <button class="btn" onclick="addToCart('Luxury Handbag', 250)">Add to Cart</button>
+      </div>
+      <div class="product-card slide-up">
+        <img src="images/pic3.jpg" alt="white bag">
+        <h3>Designer Tote</h3>
+        <p>$300</p>
+        <button class="btn" onclick="addToCart('Designer Tote', 300)">Add to Cart</button>
+      </div>
+      <div class="product-card slide-up">
+        <img src="images/pic4.jpg" alt="leather goods">
+        <h3>Leather Goods Lecta</h3>
+        <p>$500</p>
+        <button class="btn" onclick="addToCart('Leather Goods Lecta', 500)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <table id="cartTable">
+      <tr><th>Item</th><th>Price</th><th>Quantity</th><th>Subtotal</th></tr>
+    </table>
+    <p id="totalDisplay"><strong>Total: $0</strong></p>
+    <button class="btn" onclick="scrollToSection('checkout')">Proceed to Checkout</button>
+  </section>
+
+  <section id="checkout" class="checkout">
+    <h2>Shipping Information</h2>
+    <form id="checkoutForm">
+      <label>Name</label>
+      <input type="text" placeholder="Enter your name" required>
+      <label>Address</label>
+      <input type="text" placeholder="Enter your address" required>
+      <label>Payment</label>
+      <input type="text" placeholder="Card number" required>
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Opulence Atelier. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
